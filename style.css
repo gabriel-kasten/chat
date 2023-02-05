@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #1a1924;
+  font-size: 1.6rem;
+  color: white;
+}
+
+#app {
+  padding: 2.4rem 3.2rem;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+  margin: auto;
+}
+
+#messages {
+  overflow-y: scroll;
+  padding-bottom: 2.4rem;
+}
+
+#messages::-webkit-scrollbar {
+  display: none;
+}
+
+.messages {
+  margin-top: 3rem;
+  gap: 3rem;
+
+  display: grid;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.message .body {
+  background-color: #633BBC;
+  border-radius: 0 .8rem .8rem .8rem;
+
+  width: fit-content;
+
+  margin-top: 1rem;
+  padding: 1.4rem;
+}
+
+.message:not(.you) {
+  width: 60vw;
+}
+
+.message.you .send {
+  text-align: right;
+}
+
+.message.you .body {
+  margin-left: auto;
+  background-color: #40b63c;
+  border-radius: .8rem .8rem 0 .8rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+
+  background-color: #282843;
+  border-radius: 999rem;
+  padding: 1.4rem 2.4rem;
+}
+
+form:focus-within {
+  outline: 0.3rem solid #58d654;
+}
+
+input {
+  flex: 1;
+  outline: none;
+
+  color: #E1E1E6;
+}
+
+input::placeholder {
+  color: #E1E1E6;
+  font-size: 1.2rem;
+}
+
+button i {
+  color: #E1E1E6;
+  font-size: 2.4rem;
+
+  cursor: pointer;
+}
+
+input,
+button {
+  background-color: transparent;
+  border: none;
+}
