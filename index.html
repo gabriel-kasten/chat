@@ -1,59 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Libs -->
-  <script src="https://unpkg.com/phosphor-icons"></script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Js -->
-  <script src="index.js" defer></script>
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
 
 <body>
   <div id="app">
-    <div id="top">A</div>
-    <div id="messages">
+    <div id="top">
+      <div id="user-info">
+        <img src="https://randomuser.me/api/portraits/women/50.jpg"
+          alt="Mulher asiatica com gorro preto, óculos e cabelo preto até os ombros" />
 
-      <div class="message">
-        <div class="top">Hoje - 12:20</div>
-        <div class="body">Comece mandando uma mensagem!</div>
+        <div id="user-status">
+          <strong>Cecilia Sassaki</strong>
+          <div class="status">Online</div>
+        </div>
       </div>
+      <div id="close-chat">
+        <i class="ph-x-fill"></i>
+      </div>
+    </div>
+    <div id="messages">
+      <div id="last-seen">Hoje 11:30</div>
 
-      <!-- <div class="message you">
-        <div class="send">Hoje - 12:20</div>
-        <div class="body">Boa Tarde!</div>
-      </div> -->
-
+      <div class="messages">
+        <div class="message">
+          <div class="top">Cecilia - 11:30</div>
+          <div class="body">Tive uma ideia incrível para um projeto! 😍</div>
+        </div>
+        <div class="message you">
+          <div class="top">Você - 11:32</div>
+          <div class="body">Sério? Me conta mais.</div>
+        </div>
+      </div>
     </div>
     <div id="bottom">
-      <!-- <form> -->
-      <input id="input_field" type="text" placeholder="Digite sua mensagem">
-      <button id="send_message"><i class="ph-paper-plane-right-light"></i></button>
-      <!-- </form> -->
+      <input id="input_messsage_field" type="text" placeholder="Digite sua mensagem" />
+      <button id="send_message_button">
+        <i class="ph-paper-plane-right-fill"></i>
+      </button>
     </div>
   </div>
-
-  <script>
-    const scrollBottom = () => {
-      messageArea.scrollTop = messageArea.scrollHeight;
-    }
-
-    window.onload = scrollBottom;
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
